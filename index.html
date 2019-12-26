@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<title>Crypto Saver</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Crypto Saver is a financial application that enables users save and withdraw Cryptocurrencies safely. This application was developed by MOFEHINTOLU MUMUNI, who is a fullstack Software Engineer with good knowledge of web and blockchain software development." />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
+	<link href="css/prettyPhoto.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/fontawesome-all.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
+	    rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+</head>
+
+<body>
+	<!--/banner-->
+	<div class="banner" id="home">
+		<!-- header -->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header">
+				<h1 class="logo">
+					<a class="navbar-brand" href="index.html">
+						<!--<i class="fab fa-accusoft"></i> -->
+                        <i class="far fa-money-bill-alt"></i>
+						<span>Crypto Saver</span>
+					</a>
+				</h1>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				    aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="fas fa-bars"></i>
+					</span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link ml-lg-0" href="index.html">Home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="deposit.html">Deposit</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="withdraw.html">Withdraw</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="balance.html">Check Balance</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://mofehintolumumuni.com" target="_blank">Contact Developer</a>
+						</li>
+					
+					</ul>
+				</div>
+				<!-- <form class="form-inline my-2 my-lg-0">
+							  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+							  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+							</form> -->
+			</nav>
+		</header>
+
+	<!-- //header -->
+	<!-- banner-text -->
+	<div class="slider-content">
+		<div class="wrapper-slider text-left">
+			<!-- Slideshow 1 -->
+			<div class="rslides_container">
+				<ul class="rslides" id="slider1">
+					<li>
+						<div class="banner-info">
+							<h3>Awesome financial help</h3>
+							<p>Crypto Saver is a financial application that enables users save and withdraw Ethereum (ETHER) Cryptocurrency safely.</p>
+						</div>
+					</li>
+					<li>
+						<div class="banner-info">
+							<h3>Monitor your finance</h3>
+							<p>Crypto Saver enables users get a complete breakdown of their saving and withdrawal behaviour. </p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+    <div class="ban-form text-left"  id="regAccount">
+			<h5>Open an Ethereum savings Account Now!</h5>
+			<p id="regLoading" style="display: none; color:darkred;">Loading......<i class="fas fa-cogs"></i></p>
+			<form id="formReg" onSubmit="App.registerUser(); return false;" role="form" class="mt-4" >
+                <input id="_Firstname" class="form-control" type="text" placeholder="First name" name="firstname" required="" value="" />
+                <input id="_middlename" class="form-control" type="text" placeholder="Middle name" name="middlename" required="" value=""  />
+                
+                <input id="_lastname" class="form-control" type="text" placeholder="Last name" name="lastname" required="" value=""  />
+                
+                <input id="_sex" class="form-control" type="text" placeholder="sex" name="sex" required="" value="" >
+                
+                <input id="_email" class="form-control" type="email" placeholder="Email" name="email" value="" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                
+                <input id="_phoneNumber" class="form-control" type="number" placeholder="Phone Number" name="phoneNumber" value="" required="" min="5" pattern="[0-9]">
+
+                              
+				<input class="form-control text-uppercase" type="submit" value="Create Account">
+			</form>
+		</div>
+        
+        
+    	<div class="ban-form text-left" id="editAccount" style="display: none;">
+			<h5>Edit Your Account Details</h5>
+			<p id="editLoading" style="display: none; color:darkred;">Loading......<i class="fas fa-cogs"></i></p>
+			<form class="mt-4" onSubmit="App.editInfo(); return false;" role="form" id="formEdit">
+				  <input id="edit_Firstname" class="form-control" type="text" placeholder="First name" name="e_firstname" required="" value="" />
+                <input id="edit_middlename" class="form-control" type="text" placeholder="Middle name" name="e_middlename" required="" value=""  />
+                
+                <input id="edit_lastname" class="form-control" type="text" placeholder="Last name" name="e_lastname" required="" value=""  />
+                
+                <input id="edit_sex" class="form-control" type="text" placeholder="sex" name="e_sex" required="" value="" >
+                
+                <input id="edit_email" class="form-control" type="email" placeholder="Email" name="e_email" value="" required="" pattern="[a-z0-9.edit_%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                
+                <input id="edit_phoneNumber" class="form-control" type="number" placeholder="Phone Number" name="e_phoneNumber" value="" required="" min="5" pattern="[0-9]">
+
+				<input class="form-control text-uppercase" type="submit" value="Edit Account Details">
+			</form>
+		</div>
+        
+        
+		<div class="clearfix"></div>
+	</div>
+</div>
+	<!-- //banner -->
+	<!--/bottom-banner-w3layouts-->
+	<section class="bottom-banner">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6 about-img">
+				</div>
+				<div class="col-lg-6 about-info text-left">
+					<div class="ab-info-text">
+						<h3 class="tittle-wthree text-left">
+							About Crypto Saver</h3>
+						<div class="service-in text-left mt-5">
+							<div class="card">
+								<div class="card-body">
+									<i class="far fa-star"></i>
+									<h5 class="card-title">Quality Software </h5>
+									<p class="card-text">Crypto Saver is a financial application that enables users save and withdraw Ethereum (ETHER) Cryptocurrency safely. This application was developed by MOFEHINTOLU MUMUNI, who is a fullstack software engineering with good knowledge of web and blockchain software development.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="service-in text-left mt-4">
+							<div class="card">
+								<div class="card-body">
+									<i class="fas fa-users"></i>
+									<h5 class="card-title">Secure and glitch free service for users</h5>
+									<p class="card-text">With Crypto Saver your Cryptocurrency is always safely stored for whenever you need it. Deposits and withdrawals are down without any hassle.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//bottom-banner-w3layouts-->
+
+
+	<!--/bottom-banner-w3layouts-->
+	<section class="bottom-banner-w3layouts product">
+		<div class="container">
+			<h3 class="tittle-wthree text-center">
+				Do you want a Decentralized application developed for you? </h3>
+			<div class="row inner-sec-w3ls-agileinfo">
+				<div class="mid-para text-center px-lg-5 px-md-4 px-2">
+					<p>If you want a decetralized application developed for you, contact MOFEHINTOLU MUMUNI, who is a fullstack Software Engineer with good knowledge of web and blockchain software development.</p>
+                        <a href="mailto:hello@mofehintolumumuni.com">hello@mofehintolumumuni.com </a> or  <a href="mailto:mofehintolumumuni@gmail.com">mofehintolumumuni@gmail.com </a>
+						<div class="read inner mt-4">
+							<a href="single.html" class="btn btn-sm animated-button victoria-two">Contact Developer</a>
+						</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--//-->
+
+	<!--footer -->
+	<footer>
+		<div class="container">
+			<div class="row footer-top">
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>About Crypto Saver</h3>
+					</div>
+					<div class="footer-text">
+						<p>Crypto Saver is a financial application that enables users save and withdraw Cryptocurrencies safely.</p>
+						<div class="social-icon footer text-left mt-4">
+						
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>Get in touch</h3>
+					</div>
+					<div class="contact-info">
+					
+						<div class="phone">
+							<h4>Contact :</h4>
+							<p>Phone : +2348171287113</p>
+							<p>Email 1:
+							   <a href="mailto:hello@mofehintolumumuni.com">hello@mofehintolumumuni.com </a> 
+							</p>
+                            <p>Email 2:
+		                    <a href="mailto:mofehintolumumuni@gmail.com">mofehintolumumuni@gmail.com </a>
+					
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>Useful Links</h3>
+					</div>
+					<ul class="links">
+						<li>
+							<a href="index.html">HOME</a>
+						</li>
+						<li>
+							<a href="deposit.html">DEPOSIT</a>
+						</li>
+						<li>
+							<a href="withdraw.html">WITHDRAW</a>
+						</li>
+						<li>
+							<a href="balance.html">CHECK BALANCE</a>
+						</li>
+						<li>
+							<a href="http://mofehintolumumuni.com" target="_blank">CONTACT DEVELOPER</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-lg-3 footer-grid-w3ls">
+					<div class="footer-title">
+						<h3>Developer Bio</h3>
+					</div>
+					<div class="footer-text">
+						<p>Crypto Saver application was developed by <a href="http://mofehintolumumuni.com">MOFEHINTOLU MUMUNI </a>, who is a fullstack Software Engineer with good knowledge of web and blockchain software development.</p>
+					
+					</div>
+				</div>
+			</div>
+			<div class="copyright mt-4">
+				<p class="copy-right text-center ">&copy; <i id="year"></i> Crypto Saver. All Rights Reserved | Developed by
+					<a href="http://mofehintolumumuni.com"> Mofehintolu Mumuni </a>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+	<a href="#home" class="scroll" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+	<!-- //Custom-JavaScript-File-Links -->
+	<!-- js -->
+	<script  src="js/jquery-2.2.3.min.js"></script>
+	<!--slider-->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+
+			// Slideshow 1
+			$("#slider1").responsiveSlides({
+				auto: false,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "centered-btns"
+			});
+
+		});
+	</script>
+	<!--//slider-->
+	<!--pop-up-box-->
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="js/jquery.magnific-popup.js"></script>
+	<!--//pop-up-box-->
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!--//search-bar-->
+
+	<!-- carousel -->
+	<script src="js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.owl-carousel').owlCarousel({
+				loop: true,
+				margin: 10,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 1,
+						nav: false
+					},
+					900: {
+						items: 1,
+						nav: false
+					},
+					1000: {
+						items: 1,
+						nav: true,
+						loop: false,
+						margin: 20
+					}
+				}
+			})
+		})
+	</script>
+	<!-- //carousel -->
+
+	<!-- //js -->
+	<script src="js/bootstrap.js"></script>
+	<!--/ start-smoth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			/*
+									var defaults = {
+										  containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+									 };
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!--// end-smoth-scrolling -->
+	<!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
+	<script src="js/jquery-1.7.2.js"></script>
+	<script src="js/jquery.quicksand.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/jquery.prettyPhoto.js"></script>
+	<!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
+   	<script>
+       /* $(function() {
+  $(window).load(function() {
+    var edit = $("#editAccount");
+    
+    edit.show();
+    
+    var regAccount = $("#regAccount");
+    regAccount.hide();
+    
+   
+  })
+});
+*/
+      
+      $(document).ready(function()
+        {
+          var date = new Date();
+          var timeStringValue = date.toDateString();
+          var year = timeStringValue.split(" ")[3];
+          var keys = Object.keys(date);
+
+            $("#year").html(year);
+  
+        });
+	</script>
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.min.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+
+</html>
