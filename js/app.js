@@ -6,7 +6,7 @@ App = {
   account: '0x0',
 
   init: function() {
-    console.log("App initialized...")
+   // console.log("App initialized...")
     return App.initWeb3();
   },
 
@@ -15,7 +15,7 @@ App = {
       App.web3Provider = web3.currentProvider;
       web3 = new Web3(web3.currentProvider);
     } else {
-      window.alert("Please connect to Metamask.")
+      window.alert("Please connect to Metamask cryptocurrency wallet.")
     }
     // Modern dapp browsers...
     if (window.ethereum) {
@@ -38,7 +38,7 @@ App = {
     }
     // Non-dapp browsers...
     else {
-      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+      alert('Non-Ethereum browser detected. You should consider trying MetaMask!');
     }
     return App.initContracts();
   },
@@ -75,7 +75,7 @@ App = {
       if(err === null) {
         App.account = account;
         $('#accountAddress').html("Your Account: " + account);
-        console.log(account);
+       // console.log(account);
       }
     });
     
@@ -132,7 +132,7 @@ App = {
           $('#edit_sex').val(result[3]);
           $('#edit_email').val(result[4]);
           $('#edit_phoneNumber').val(result[5]);
-
+            //console.log(result[5]);
             editForm.show();
             regForm.hide();
 
@@ -141,7 +141,7 @@ App = {
         }
         else
         {
-          alert("You do not have an account on Crypto Saver.Register to use the Crypto Saver, any Ether sent to the samrt contract would be lost!");
+          alert("You do not have an account on Crypto Saver.Register to use the Crypto Saver, if you are not registered any Ether sent to the smart contract would be lost!");
         }
         
 
