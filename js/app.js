@@ -6,6 +6,7 @@ App = {
   account: '0x0',
 
   init: function() {
+    alert("This application is connected to the Kovan ETH network, to use this application ensure that you have Metamask installed, have kovan ETH (KETH) and you are connected to the Kovan network!");
    // console.log("App initialized...")
     return App.initWeb3();
   },
